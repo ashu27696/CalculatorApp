@@ -3,4 +3,5 @@ WORKDIR /app
 COPY . .
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
-CMD ["java", "-jar", "target/CalculatorApp.jar"]
+CMD ["java", "-jar", "target/$(ls target | grep '.jar$' | head -n 1)"]
+
