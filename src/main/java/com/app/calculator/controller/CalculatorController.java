@@ -25,7 +25,7 @@ public class CalculatorController {
 
     @GetMapping("/multiply")
     public double multiply(@RequestParam double a, @RequestParam double b) {
-        return calculatorService.multiply(a, b);
+        return calculatorService.multiply (a, b);
     }
 
     @GetMapping("/divide")
